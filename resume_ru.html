@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шарк Офис - Резюме Айдара</title>
+    <link id="theme-link" rel="stylesheet" href="styles_dark.css">
+    <script src="resume_scripts.js"></script>
+    <style>
+        .glitch-title {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 3em;
+            color: #66b3ff;
+            position: relative;
+            animation: glitch 1s infinite;
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 2px 2px красный;
+            }
+            50% {
+                text-shadow: -2px -2px голубой;
+            }
+            100% {
+                text-shadow: 2px 2px красный;
+            }
+        }
+
+        .toggle-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .toggle-buttons button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background-color: #66b3ff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-buttons button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Тогглы для темы и языка -->
+        <div class="toggle-buttons">
+            <button class="language-toggle" onclick="toggleDarkMode()">Переключить тему</button>
+            <button class="language-toggle" onclick="switchToEnglish()">Switch to English</button>
+        </div>
+
+        <!-- Заголовок с анимацией глитч -->
+        <header class="header">
+            <div class="profile-picture">
+                <img src="images/profile.jpg" alt="Айдар Шумбалов" style="border-radius: 50%; width: 150px;">
+            </div>
+            <h1 class="glitch-title">Айдар Шумбалов</h1>
+            <p>Студент первого курса, ВШЭ Санкт-Петербург<br>Направление: Прикладной анализ и искусственный интеллект</p>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="experience.html" onclick="applyRandomEffect()">Опыт работы</a></li>
+                <li><a href="about.html" onclick="applyRandomEffect()">Обо мне</a></li>
+                <li><a href="skills.html" onclick="applyRandomEffect()">Навыки</a></li>
+                <li><a href="contact.html" onclick="applyRandomEffect()">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        // Хаотичные эффекты
+        window.onload = function() {
+            createRandomEffect();
+            randomBackgroundChange();
+            addGlitchEffect();
+
+            // Периодические эффекты
+            setInterval(createRandomEffect, 7000);
+            setInterval(randomBackgroundChange, 15000);
+            setInterval(addGlitchEffect, 12000);
+        };
+
+        // Функция для переключения темы
+        function toggleDarkMode() {
+            const themeLink = document.getElementById('theme-link');
+            if (themeLink.getAttribute('href') === 'styles_dark.css') {
+                themeLink.setAttribute('href', 'styles.css');
+            } else {
+                themeLink.setAttribute('href', 'styles_dark.css');
+            }
+        }
+
+        // Функция для переключения на английскую версию
+        function switchToEnglish() {
+            window.location.href = 'index.html'; // Переход на англоязычную версию сайта
+        }
+    </script>
+</body>
+</html>

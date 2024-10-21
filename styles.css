@@ -1,0 +1,167 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #66b3ff;
+}
+
+.header .profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #333;
+    transition: transform 0.3s ease;
+}
+
+.header .profile-picture img:hover {
+    transform: scale(1.1);
+}
+
+.glitch-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #66b3ff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #0056b3;
+}
+
+button.language-toggle {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #66b3ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.language-toggle:hover {
+    background-color: #0056b3;
+}
+
+.experience, .about, .skills, .contact {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #eeeeee;
+    border-left: 4px solid #66b3ff;
+    border-radius: 4px;
+}
+
+.about p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.skills li {
+    text-align: center;
+    padding: 15px;
+    background: #dddddd;
+    border: 1px solid #66b3ff;
+    border-radius: 8px;
+}
+
+.contact .contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 15px;
+}
+
+#contact-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #333;
+}
+
+#contact-form button {
+    padding: 10px;
+    background-color: #66b3ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+}
